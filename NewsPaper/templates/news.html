@@ -1,0 +1,29 @@
+{% extends 'flatpages/default.html' %}
+
+{% load censor %}
+
+{% block title %}
+    Новость
+{% endblock title %}
+
+{% block content %}
+    <h1>{{ news.post_title|censor }}</h1>
+    <p style="font-size: 14pt"> {{ news.adding_time|date:'d M Y' }} </p>
+    <table align="center">
+        <tr>
+            <td style="width: 400px">
+                Категория:
+                {% for cat in news.category.filter %}
+                    {{ cat.name }}
+                {% endfor %}
+            </td>
+            <td>
+                Автор: {{ news.author.author }}
+            </td>
+        </tr>
+        <tr style="width: 500px">
+            <p style="font-size: 14pt; text-align: justify">{{ news.post_text|censor }}</p>
+        </tr>
+
+    </table>
+{% endblock content %}

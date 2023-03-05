@@ -7,6 +7,9 @@ class Author(models.Model):
     author = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
     author_rating = models.IntegerField(default=0)
 
+    def __str__(self):
+        return User.objects.get(pk=self.pk).username
+
     def update_rating(self) -> None:
         summ_rating = 0
         # добавляем суммарный рейтинг постов автора
@@ -26,6 +29,9 @@ class Author(models.Model):
 class Category(models.Model):
     name = models.CharField(max_length=255, unique=True)
 
+    def __str__(self):
+        return self.name
+
 
 class Post(models.Model):
     category = models.ManyToManyField('Category', through='PostCategory')
@@ -38,7 +44,7 @@ class Post(models.Model):
     author = models.ForeignKey('Author', on_delete=models.CASCADE)
 
     def __str__(self):
-        return f'{self.post_title}: {self.preview()}'
+        return f'{self.post_title}'
 
     def like(self) -> None:
         self.post_rating += 1
@@ -56,6 +62,9 @@ class PostCategory(models.Model):
     post = models.ForeignKey('Post', on_delete=models.CASCADE)
     category = models.ForeignKey('Category', on_delete=models.CASCADE)
 
+    def __str__(self):
+        return f'{self.category}: {self.post}'
+
 
 class Comment(models.Model):
     comment_text = models.TextField()
@@ -64,6 +73,12 @@ class Comment(models.Model):
 
     post = models.ForeignKey('Post', on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.preview()
+
+    def preview(self) -> str:
+        return f'{self.comment_text[:123]}...'
 
     def like(self) -> None:
         self.comment_rating += 1
