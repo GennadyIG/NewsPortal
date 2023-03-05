@@ -14,13 +14,13 @@
 
     • созданы страницы с полной информации о статье. Для перехода к общему списку в верхнем левом углу сделана ссылка.
     
-    ![image](https://user-images.githubusercontent.com/120253513/222982935-be246e69-dd1e-4f3a-85b5-2db6bd519836.png)
+ ![image](https://user-images.githubusercontent.com/120253513/222982935-be246e69-dd1e-4f3a-85b5-2db6bd519836.png)
 
     • создан фильтр, обеспечивающий цензуру
     
-    ![image](https://user-images.githubusercontent.com/120253513/222983070-6c3700b6-c7fe-417c-80cf-6eaa913e8ded.png)
+ ![image](https://user-images.githubusercontent.com/120253513/222983070-6c3700b6-c7fe-417c-80cf-6eaa913e8ded.png)
 
     • внутри фильтра реализована проверка на тип поступающих данных
     
-    ![image](https://user-images.githubusercontent.com/120253513/222982442-f7060683-4e3c-4a0f-b7e9-1ad84d2fbf6d.png)
+ ![image](https://user-images.githubusercontent.com/120253513/222982442-f7060683-4e3c-4a0f-b7e9-1ad84d2fbf6d.png)
 
