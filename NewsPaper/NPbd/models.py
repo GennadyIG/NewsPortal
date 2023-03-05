@@ -37,6 +37,9 @@ class Post(models.Model):
 
     author = models.ForeignKey('Author', on_delete=models.CASCADE)
 
+    def __str__(self):
+        return f'{self.post_title}: {self.preview()}'
+
     def like(self) -> None:
         self.post_rating += 1
         self.save()

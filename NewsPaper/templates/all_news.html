@@ -1,0 +1,40 @@
+{% extends 'flatpages/default.html' %}
+
+{% block title %}
+    Новости
+{% endblock title %}
+
+{% block content %}
+    <h1>Список новостей:</h1>
+    <table align="center" style="height: 220px; width: 700px">
+            <td>
+                Автор
+            </td>
+            <td>
+                Название
+            </td>
+            <td>
+               Предпросмотр
+            </td>
+            <td style="width: 80px">
+               Категория
+            </td>
+            <td>
+               Дата добавления
+            </td>
+        </tr>
+        {% for news in all_news %}
+            <tr style="border-bottom: 1px solid black">
+                <td>{{ news.author.author }}</td>
+                <td>{{ news.post_title }}</td>
+                <td>{{ news.preview }}</td>
+                <td>
+                    {% for cat in news.category.filter %}
+                    {{ cat.name }}
+                    {% endfor %}
+                </td>
+                <td>{{ news.adding_time|date:'d M Y' }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock content %}
