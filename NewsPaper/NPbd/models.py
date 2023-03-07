@@ -13,14 +13,12 @@ class Author(models.Model):
     def update_rating(self) -> None:
         summ_rating = 0
         # добавляем суммарный рейтинг постов автора
-        summ_rating += sum((post.post_rating for post in self.post_set.all())) * 3
+        summ_rating += self.post_set.aggregate(s=models.Sum('post_rating'))['s'] * 3
         # добавляем суммарный рейтинг комментариев автора
-        summ_rating += sum((comment.comment_rating for comment in Comment.objects.filter(user_id=self.pk)))
+        summ_rating += User.objects.get(pk=self.pk).comment_set.aggregate(s=models.Sum('comment_rating'))['s']
         # добавляем рейтинг коментариев к постам автора, без учета комментариев автора
         for post in self.post_set.all():
-            for comment in post.comment_set():
-                if comment.user_id != self.pk:
-                    summ_rating += comment.comment_rating
+            summ_rating += sum(comment.comment_rating for comment in post.comment_set.all() if comment.user_id != self.pk)
 
         self.author_rating = summ_rating
         self.save()
