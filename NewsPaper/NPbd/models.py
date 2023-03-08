@@ -7,19 +7,20 @@ class Author(models.Model):
     author = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
     author_rating = models.IntegerField(default=0)
 
-    def __str__(self):
+    def __str__(self) -> str:
         return User.objects.get(pk=self.pk).username
 
     def update_rating(self) -> None:
         summ_rating = 0
         # добавляем суммарный рейтинг постов автора
-        summ_rating += self.post_set.aggregate(s=models.Sum('post_rating'))['s'] * 3
+        user_posts = self.post_set.all()
+        summ_rating += user_posts.aggregate(s=models.Sum('post_rating'))['s'] * 3
         # добавляем суммарный рейтинг комментариев автора
-        summ_rating += User.objects.get(pk=self.pk).comment_set.aggregate(s=models.Sum('comment_rating'))['s']
+        summ_rating += self.author.comment_set.aggregate(s=models.Sum('comment_rating'))['s']
         # добавляем рейтинг коментариев к постам автора, без учета комментариев автора
-        for post in self.post_set.all():
-            summ_rating += sum(comment.comment_rating for comment in post.comment_set.all() if comment.user_id != self.pk)
-
+        summ_rating += Comment.objects.filter(post__in=user_posts).exclude(user__author__in=[self]).aggregate(s=models.Sum('comment_rating'))['s']
+        # for post in user_posts:
+        #     summ_rating += sum(com.comment_rating for com in post.comment_set.all() if com.user_id != self.pk)
         self.author_rating = summ_rating
         self.save()
 
@@ -27,7 +28,7 @@ class Author(models.Model):
 class Category(models.Model):
     name = models.CharField(max_length=255, unique=True)
 
-    def __str__(self):
+    def __str__(self) -> str:
         return self.name
 
 
@@ -41,7 +42,7 @@ class Post(models.Model):
 
     author = models.ForeignKey('Author', on_delete=models.CASCADE)
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f'{self.post_title}'
 
     def like(self) -> None:
@@ -60,7 +61,7 @@ class PostCategory(models.Model):
     post = models.ForeignKey('Post', on_delete=models.CASCADE)
     category = models.ForeignKey('Category', on_delete=models.CASCADE)
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f'{self.category}: {self.post}'
 
 
@@ -72,7 +73,7 @@ class Comment(models.Model):
     post = models.ForeignKey('Post', on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
-    def __str__(self):
+    def __str__(self) -> str:
         return self.preview()
 
     def preview(self) -> str:
