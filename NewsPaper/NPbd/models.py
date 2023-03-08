@@ -18,7 +18,7 @@ class Author(models.Model):
         # добавляем суммарный рейтинг комментариев автора
         summ_rating += self.author.comment_set.aggregate(s=models.Sum('comment_rating'))['s']
         # добавляем рейтинг коментариев к постам автора, без учета комментариев автора
-        summ_rating += Comment.objects.filter(post__in=user_posts).exclude(user__author__in=[self]).aggregate(s=models.Sum('comment_rating'))['s']
+        summ_rating += Comment.objects.filter(post__in=user_posts).exclude(user__author=self).aggregate(s=models.Sum('comment_rating'))['s']
         # for post in user_posts:
         #     summ_rating += sum(com.comment_rating for com in post.comment_set.all() if com.user_id != self.pk)
         self.author_rating = summ_rating
