@@ -15,11 +15,11 @@
     • реализован показ на одной странице не больше 10 новостей, видны номера только ближайших страниц, а также возможность перехода к первой или последней странице
     • реализован поиск новостей по нескольким пунктам
     
-    ![image](https://user-images.githubusercontent.com/120253513/224829791-d45b772d-9c6e-4f36-96b4-abf919ec31b3.png)
+   ![image](https://user-images.githubusercontent.com/120253513/224829791-d45b772d-9c6e-4f36-96b4-abf919ec31b3.png)
     
-    ![image](https://user-images.githubusercontent.com/120253513/224830249-25b8cf2f-0bda-41eb-98ef-23c162b9f4f6.png)
+   ![image](https://user-images.githubusercontent.com/120253513/224830249-25b8cf2f-0bda-41eb-98ef-23c162b9f4f6.png)
     
-    ![image](https://user-images.githubusercontent.com/120253513/224830429-85ecc7f5-3651-435e-a01c-c70bcc2ce0da.png)
+   ![image](https://user-images.githubusercontent.com/120253513/224830429-85ecc7f5-3651-435e-a01c-c70bcc2ce0da.png)
 
     • подготовлены страницы создания, редактирования и удаления новостей и статей, расположенные по следующим ссылкам:
         - /news/create/
@@ -29,14 +29,14 @@
         - /articles/<int:pk>/edit/
         - /articles/<int:pk>/delete/
     
-    ![image](https://user-images.githubusercontent.com/120253513/224831021-edd1e476-6b83-462a-abb6-342f1a8c678d.png)
+   ![image](https://user-images.githubusercontent.com/120253513/224831021-edd1e476-6b83-462a-abb6-342f1a8c678d.png)
 
-    ![image](https://user-images.githubusercontent.com/120253513/224831122-61164572-cab4-4384-8f11-c379c9620faa.png)
+   ![image](https://user-images.githubusercontent.com/120253513/224831122-61164572-cab4-4384-8f11-c379c9620faa.png)
     
-    ![image](https://user-images.githubusercontent.com/120253513/224831249-af51736c-bcfa-4260-8373-8a7d377c5cc3.png)
+   ![image](https://user-images.githubusercontent.com/120253513/224831249-af51736c-bcfa-4260-8373-8a7d377c5cc3.png)
 
-    ![image](https://user-images.githubusercontent.com/120253513/224831426-b7d26b4d-803f-475b-8fd8-f01eb95b92d3.png)
+   ![image](https://user-images.githubusercontent.com/120253513/224831426-b7d26b4d-803f-475b-8fd8-f01eb95b92d3.png)
 
-    ![image](https://user-images.githubusercontent.com/120253513/224831581-f40176bc-b78d-4dc4-a974-3d9cdff8557c.png)
+   ![image](https://user-images.githubusercontent.com/120253513/224831581-f40176bc-b78d-4dc4-a974-3d9cdff8557c.png)
 
-    ![image](https://user-images.githubusercontent.com/120253513/224831783-ebe87aad-5ce1-4112-b933-c0029bf566c9.png)
+   ![image](https://user-images.githubusercontent.com/120253513/224831783-ebe87aad-5ce1-4112-b933-c0029bf566c9.png)
