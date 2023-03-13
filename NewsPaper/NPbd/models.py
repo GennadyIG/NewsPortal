@@ -1,6 +1,7 @@
 from django.db import models
 from .resources import *
 from django.contrib.auth.models import User
+from django.urls import reverse
 
 
 class Author(models.Model):
@@ -19,8 +20,6 @@ class Author(models.Model):
         summ_rating += self.author.comment_set.aggregate(s=models.Sum('comment_rating'))['s']
         # добавляем рейтинг коментариев к постам автора, без учета комментариев автора
         summ_rating += Comment.objects.filter(post__in=user_posts).exclude(user__author=self).aggregate(s=models.Sum('comment_rating'))['s']
-        # for post in user_posts:
-        #     summ_rating += sum(com.comment_rating for com in post.comment_set.all() if com.user_id != self.pk)
         self.author_rating = summ_rating
         self.save()
 
@@ -44,6 +43,9 @@ class Post(models.Model):
 
     def __str__(self) -> str:
         return f'{self.post_title}'
+
+    def get_absolute_url(self):
+        return reverse('post_detail', args=[str(self.id)])
 
     def like(self) -> None:
         self.post_rating += 1

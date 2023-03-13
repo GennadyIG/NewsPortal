@@ -2,14 +2,45 @@
 
 {% load censor %}
 
+{% load custom_tags %}
+
 {% block title %}
     Новости
 {% endblock title %}
 
 {% block content %}
     <h1>Список новостей:</h1>
-    <h5>Количество новостей: {{ all_news|length }}</h5>
-    <p></p>
+    <h5>Показаны {{ page_obj.start_index }}-{{ page_obj.end_index }} из {{ page_obj.paginator.count }}</h5>
+
+    <form action="" method="get">
+       {# Переменная, которую мы передали через контекст, может сгенерировать нам форму с полями #}
+       {{ filterset.form.as_p }}
+       {# Добавим кнопку отправки данных формы #}
+       <input type="submit" value="Найти" />
+    </form>
+
+    {% if page_obj.has_previous %}
+        <a href="?{% url_replace page=1 %}">1</a>
+        {% if page_obj.previous_page_number != 1 %}
+            {% if page_obj.previous_page_number > 2 %}
+                ...
+            {% endif %}
+            <a href="?{% url_replace page=page_obj.previous_page_number %}">{{ page_obj.previous_page_number }}</a>
+        {%  endif %}
+    {% endif %}
+
+    {{ page_obj.number }}
+
+    {% if page_obj.has_next %}
+        <a href="?{% url_replace page=page_obj.next_page_number %}">{{ page_obj.next_page_number }}</a>
+        {% if page_obj.next_page_number != page_obj.paginator.num_pages %}
+            ...
+            <a href="?{% url_replace page=page_obj.paginator.num_pages %}">{{ page_obj.paginator.num_pages }}</a>
+        {% endif %}
+    {% endif %}
+
+    <br>
+
     <table align="center" style="height: 220px; display: inline-block">
         <tr style="border-bottom: 1px solid black">
             <td>
