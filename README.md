@@ -37,15 +37,13 @@
         
 ![image](https://user-images.githubusercontent.com/120253513/226192462-e9352974-9f6b-4ac0-a75d-2b33a44c3b39.png)
 
-    • Если пользователю разрешено изменять/удалять посты, то на странице с полным описанием будут доступны соответствующие кнопки, но если пользователь не является автором данного поста или не входит в группу Moderators, то при нажатии на них появится ошибка с соответствующим предупреждением
+    • Если пользователю разрешено изменять/удалять посты, то на странице с полным описанием будут доступны соответствующие кнопки.
+    Кнопки видны если пользователь является автором поста или входит в группу Moderators
 
 ![image](https://user-images.githubusercontent.com/120253513/226192595-1341113d-cd21-4ecd-9e58-d945da6d111e.png)
 
-![image](https://user-images.githubusercontent.com/120253513/226192623-73c19d51-a89d-4abf-afc6-a3f4e9c974f7.png)
-
-    • 
+![image](https://user-images.githubusercontent.com/120253513/226192623-73c19d51-a89d-4abf-afc6-a3f4e9c974f7.png) 
 
 ![image](https://user-images.githubusercontent.com/120253513/226193261-f9df6362-68ce-48d4-adfd-8a1105dbf1f4.png)
-
 
 ![image](https://user-images.githubusercontent.com/120253513/226192635-4cd30d6f-bfeb-4b11-998b-74f79dd4a2a6.png)
