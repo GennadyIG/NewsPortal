@@ -45,7 +45,10 @@ class Post(models.Model):
         return f'{self.post_title}'
 
     def get_absolute_url(self):
-        return reverse('post_detail', args=[str(self.id)])
+        if self.post_type == 'NW':
+            return reverse('news_detail', args=[str(self.id)])
+        else:
+            return reverse('article_detail', args=[str(self.id)])
 
     def like(self) -> None:
         self.post_rating += 1

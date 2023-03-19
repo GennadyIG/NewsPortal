@@ -41,7 +41,7 @@
 
     <br>
 
-    <table align="center" style="height: 220px; display: inline-block">
+    <table align="center" style="display: inline-block">
         <tr style="border-bottom: 1px solid black">
             <td>
                 Заголовок
@@ -67,4 +67,15 @@
             </tr>
         {% endfor %}
     </table>
+    <br>
+    {% if perms.NPbd.add_post %}
+        <form style="float: right; margin-right: 390px" action="/articles/create">
+        <input type="submit" value="Создать статью">
+        </form>
+        <br><br>
+        <form style="float: right; margin-right: 390px" action="/news/create">
+        <input type="submit" value="Создать новость">
+        </form>
+    {% endif %}
+
 {% endblock content %}

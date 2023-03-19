@@ -1,8 +1,12 @@
+from django.contrib.auth.models import Group
+from django.http import Http404
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from .models import Post
 from .filters import PostFilter
 from .forms import PostForm
+from django.contrib.auth.mixins import PermissionRequiredMixin
+from .models import Author
 
 
 class PostList(ListView):
@@ -36,51 +40,83 @@ class PostDetail(DetailView):
     context_object_name = 'news'
 
 
-class NewsCreate(CreateView):
+class NewsCreate(PermissionRequiredMixin, CreateView):
+    permission_required = ('NPbd.add_post',)
     form_class = PostForm
     model = Post
-    template_name = 'news_edit.html'
-    success_url = 'post_detail'
+    template_name = 'news_create.html'
 
     def form_valid(self, form):
         instance = form.save(commit=False)
         instance.post_type = 'NW'
-
-        return super().form_valid(form)
-
-
-class ArticleCreate(CreateView):
-    form_class = PostForm
-    model = Post
-    template_name = 'article_edit.html'
-
-    def form_valid(self, form):
-        instance = form.save(commit=False)
-        instance.post_type = 'AR'
+        instance.author = Author.objects.get(pk=self.request.user.id)
         instance.save()
 
         return super().form_valid(form)
 
 
-class NewsUpdate(UpdateView):
+class ArticleCreate(PermissionRequiredMixin, CreateView):
+    permission_required = ('NPbd.add_post',)
+    form_class = PostForm
+    model = Post
+    template_name = 'article_create.html'
+
+    def form_valid(self, form):
+        instance = form.save(commit=False)
+        instance.post_type = 'AR'
+        instance.author = Author.objects.get(pk=self.request.user.id)
+        instance.save()
+
+        return super().form_valid(form)
+
+
+class NewsUpdate(PermissionRequiredMixin, UpdateView):
+    permission_required = ('NPbd.change_post',)
     form_class = PostForm
     model = Post
     template_name = 'news_edit.html'
 
+    def dispatch(self, request, *args, **kwargs):
+        obj = self.get_object()
+        if obj.author.author.id != self.request.user.id and not self.request.user.groups.filter(pk=3).exists():
+            raise Http404("Вы не являетесь автором данной новости")
+        return super(NewsUpdate, self).dispatch(request, *args, **kwargs)
 
-class ArticleUpdate(UpdateView):
+
+class ArticleUpdate(PermissionRequiredMixin, UpdateView):
+    permission_required = ('NPbd.change_post',)
     form_class = PostForm
     model = Post
     template_name = 'article_edit.html'
 
+    def dispatch(self, request, *args, **kwargs):
+        obj = self.get_object()
+        if obj.author.author.id != self.request.user.id and not self.request.user.groups.filter(pk=3).exists():
+            raise Http404("Вы не являетесь автором данной статьи")
+        return super(ArticleUpdate, self).dispatch(request, *args, **kwargs)
 
-class NewsDelete(DeleteView):
+
+class NewsDelete(PermissionRequiredMixin, DeleteView):
+    permission_required = ('NPbd.delete_post',)
     model = Post
     template_name = 'news_delete.html'
     success_url = reverse_lazy('post_list')
 
+    def dispatch(self, request, *args, **kwargs):
+        obj = self.get_object()
+        if obj.author.author.id != self.request.user.id and not self.request.user.groups.filter(pk=3).exists():
+            raise Http404("Вы не являетесь автором данной новости")
+        return super(NewsDelete, self).dispatch(request, *args, **kwargs)
 
-class ArticleDelete(DeleteView):
+
+class ArticleDelete(PermissionRequiredMixin, DeleteView):
+    permission_required = ('NPbd.delete_post',)
     model = Post
     template_name = 'article_delete.html'
     success_url = reverse_lazy('post_list')
+
+    def dispatch(self, request, *args, **kwargs):
+        obj = self.get_object()
+        if obj.author.author.id != self.request.user.id and not self.request.user.groups.filter(pk=3).exists():
+            raise Http404("Вы не являетесь автором данной статьи")
+        return super(ArticleDelete, self).dispatch(request, *args, **kwargs)

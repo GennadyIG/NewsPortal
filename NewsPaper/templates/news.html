@@ -3,7 +3,7 @@
 {% load censor %}
 
 {% block title %}
-    Новость
+    {{ news.post_title|censor }}
 {% endblock title %}
 
 {% block content %}
@@ -24,6 +24,22 @@
         <tr style="width: 500px">
             <p style="font-size: 14pt; text-align: justify">{{ news.post_text|censor }}</p>
         </tr>
-
     </table>
+    {% if perms.NPbd.change_post and perms.NPbd.delete_post %}
+        {% if news.post_type == 'NW' %}
+            <form style="float: right; margin-right: 390px" action="{% url 'news_edit' pk=news.id %}">
+                <input type="submit" value="Редактирование">
+            </form>
+            <form style="float: right; margin-right: 390px" action="{% url 'news_delete' pk=news.id %}">
+                <input type="submit" value="Удаление">
+            </form>
+        {% else %}
+            <form style="float: right; margin-right: 390px" action="{% url 'article_edit' pk=news.id %}">
+                <input type="submit" value="Редактирование">
+            </form>
+            <form style="float: right; margin-right: 390px" action="{% url 'article_delete' pk=news.id %}">
+                <input type="submit" value="Удаление">
+            </form>
+        {% endif %}
+    {% endif %}
 {% endblock content %}
