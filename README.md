@@ -14,13 +14,6 @@
     • внутри фильтра реализована проверка на тип поступающих данных
     • реализован показ на одной странице не больше 10 новостей, видны номера только ближайших страниц, а также возможность перехода к первой или последней странице
     • реализован поиск новостей по нескольким параметрам
-    
-   ![image](https://user-images.githubusercontent.com/120253513/224829791-d45b772d-9c6e-4f36-96b4-abf919ec31b3.png)
-    
-   ![image](https://user-images.githubusercontent.com/120253513/224830249-25b8cf2f-0bda-41eb-98ef-23c162b9f4f6.png)
-    
-   ![image](https://user-images.githubusercontent.com/120253513/224830429-85ecc7f5-3651-435e-a01c-c70bcc2ce0da.png)
-
     • подготовлены страницы создания, редактирования и удаления новостей и статей, расположенные по следующим ссылкам:
         - /news/create/
         - /news/<int:pk>/edit/
@@ -28,15 +21,26 @@
         - /articles/create/
         - /articles/<int:pk>/edit/
         - /articles/<int:pk>/delete/
+    • добавлена возможность регистрации через e-mail или аккаунт yandex
     
-   ![image](https://user-images.githubusercontent.com/120253513/224831021-edd1e476-6b83-462a-abb6-342f1a8c678d.png)
+![image](https://user-images.githubusercontent.com/120253513/226192104-89d2574f-94a9-410f-a5c6-1ef1690045a4.png)
 
-   ![image](https://user-images.githubusercontent.com/120253513/224831122-61164572-cab4-4384-8f11-c379c9620faa.png)
-    
-   ![image](https://user-images.githubusercontent.com/120253513/224831249-af51736c-bcfa-4260-8373-8a7d377c5cc3.png)
+![image](https://user-images.githubusercontent.com/120253513/226192157-aeda8a82-4446-47fc-9500-f77d40bbe4f3.png)
 
-   ![image](https://user-images.githubusercontent.com/120253513/224831426-b7d26b4d-803f-475b-8fd8-f01eb95b92d3.png)
+    • добавлена кнопка "Войти" если пользователь не авторизован и "Выйти" если авторизован
+    • на страницие со списком новостей, если пользователю разрешено создавать новости/статьи выведены кнопки их создания
+        - если не разрешено:
+        
+![image](https://user-images.githubusercontent.com/120253513/226192393-a6310680-bc63-490d-bad3-fd8e22bc5a40.png)
 
-   ![image](https://user-images.githubusercontent.com/120253513/224831581-f40176bc-b78d-4dc4-a974-3d9cdff8557c.png)
+        - если разрешено:
+        
+![image](https://user-images.githubusercontent.com/120253513/226192462-e9352974-9f6b-4ac0-a75d-2b33a44c3b39.png)
 
-   ![image](https://user-images.githubusercontent.com/120253513/224831783-ebe87aad-5ce1-4112-b933-c0029bf566c9.png)
+    • Если пользователь является автором поста или входит в группу Moderators, на странице с полным описанием он может изменить/удалить пост
+
+![image](https://user-images.githubusercontent.com/120253513/226192595-1341113d-cd21-4ecd-9e58-d945da6d111e.png)
+
+![image](https://user-images.githubusercontent.com/120253513/226192623-73c19d51-a89d-4abf-afc6-a3f4e9c974f7.png)
+
+![image](https://user-images.githubusercontent.com/120253513/226192635-4cd30d6f-bfeb-4b11-998b-74f79dd4a2a6.png)
