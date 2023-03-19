@@ -2,6 +2,8 @@
 
 {% load censor %}
 
+{% load custom_tags %}
+
 {% block title %}
     {{ news.post_title|censor }}
 {% endblock title %}
@@ -25,7 +27,7 @@
             <p style="font-size: 14pt; text-align: justify">{{ news.post_text|censor }}</p>
         </tr>
     </table>
-    {% if perms.NPbd.change_post and perms.NPbd.delete_post %}
+    {% if request.user == news.author.author or request.user|has_group:"Moderators" %}
         {% if news.post_type == 'NW' %}
             <form style="float: right; margin-right: 390px" action="{% url 'news_edit' pk=news.id %}">
                 <input type="submit" value="Редактирование">
