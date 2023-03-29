@@ -1,6 +1,6 @@
 {% extends 'flatpages/default.html' %}
 
-{% load censor %}
+{% load custom_filters %}
 
 {% load custom_tags %}
 
@@ -27,6 +27,7 @@
             <p style="font-size: 14pt; text-align: justify">{{ news.post_text|censor }}</p>
         </tr>
     </table>
+    <!--кнопки редактирования и удаления-->
     {% if request.user == news.author.author or request.user|has_group:"Moderators" %}
         {% if news.post_type == 'NW' %}
             <form style="float: right; margin-right: 390px" action="{% url 'news_edit' pk=news.id %}">
@@ -43,5 +44,11 @@
                 <input type="submit" value="Удаление">
             </form>
         {% endif %}
+    {% endif %}
+    <!--кнопки лайков-->
+    {% if request.user != news.author.author %}
+        <form style="float: right; margin-right: 390px" action="{% url 'like' %}">
+                <input type="submit" value="like">
+            </form>
     {% endif %}
 {% endblock content %}

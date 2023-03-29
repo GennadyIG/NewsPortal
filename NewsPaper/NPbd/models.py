@@ -19,7 +19,8 @@ class Author(models.Model):
         # добавляем суммарный рейтинг комментариев автора
         summ_rating += self.author.comment_set.aggregate(s=models.Sum('comment_rating'))['s']
         # добавляем рейтинг коментариев к постам автора, без учета комментариев автора
-        summ_rating += Comment.objects.filter(post__in=user_posts).exclude(user__author=self).aggregate(s=models.Sum('comment_rating'))['s']
+        summ_rating += Comment.objects.filter(post__in=user_posts).exclude(user__author=self).\
+            aggregate(s=models.Sum('comment_rating'))['s']
         self.author_rating = summ_rating
         self.save()
 
@@ -91,3 +92,16 @@ class Comment(models.Model):
     def dislike(self) -> None:
         self.comment_rating -= 1
         self.save()
+
+
+class Subscription(models.Model):
+    user = models.ForeignKey(
+        to=User,
+        on_delete=models.CASCADE,
+        related_name='subscriptions',
+    )
+    category = models.ForeignKey(
+        to='Category',
+        on_delete=models.CASCADE,
+        related_name='subscriptions',
+    )

@@ -1,0 +1,25 @@
+{% extends 'flatpages/default.html' %}
+
+{% block title %}
+    Редактирование профиля
+{% endblock title %}
+
+{% block content %}
+    <h1>Редактирование профиля</h1><br>
+    <form action="" method="post">
+        {% csrf_token %}
+        <div style='text-align: left'>
+            <p>
+                {{ form.username.label_tag }}
+                {{ form.username }}<br>
+                <font size = 2>{{ form.username.help_text }}</font></p>
+            <p>
+                {{ form.first_name.label_tag }}
+                {{ form.first_name }}</p>
+            <p>
+                {{ form.last_name.label_tag }}
+                {{ form.last_name }}</p>
+        </div>
+        <input type="submit" value="Save"/>
+    </form>
+{% endblock content %}

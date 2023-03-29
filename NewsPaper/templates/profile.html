@@ -1,0 +1,42 @@
+{% extends 'flatpages/default.html' %}
+
+{% load custom_filters %}
+
+{% block title %}
+    Профиль
+{% endblock title %}
+
+{% block content %}
+    <h1> Профиль </h1><br>
+    <p><strong>Ник: </strong>{{ request.user.username }}</p>
+    <p><strong>Имя: </strong>{{ request.user.first_name }} {{ request.user.last_name }}</p>
+    <p><strong>E-mail: </strong>{{ request.user.email }}</p>
+    <p><strong>Участие в группах: </strong>
+        {% for group in request.user|groups %}
+            {{ group }}
+        {% endfor %}
+    </p>
+    {% if request.user|has_group:'Authors' %}
+        <p><strong>Количество постов: </strong>{{ request.user|user_posts }}</p>
+        <p><strong>Рейтинг: </strong>{{ request.user.author.author_rating }}</p>
+    {% endif %}
+    <table align="center" style="width: 380px">
+        <tr>
+            <td>
+                <form action="{% url 'edit_profile' pk=request.user.id %}">
+                    <input type="submit" value="Редактировать"/>
+                </form>
+            </td>
+            <td>
+                <form action="{% url 'account_change_password' %}">
+                    <input type="submit" value="Сменить пароль"/>
+                </form>
+            </td>
+            <td>
+                <form action="{% url 'subscriptions' %}">
+                      <input type="submit" value="Подписки"/>
+                </form>
+            </td>
+        </tr>
+    </table>
+{% endblock content %}

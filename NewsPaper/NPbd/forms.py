@@ -1,5 +1,6 @@
 from django import forms
 from .models import Post
+from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 
 
@@ -10,7 +11,6 @@ class PostForm(forms.ModelForm):
             'post_title',
             'post_text',
             'category',
-            # 'author',
         ]
 
     def clean(self):

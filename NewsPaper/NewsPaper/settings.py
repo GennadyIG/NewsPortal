@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     # ... include the providers you want to enable:
     'allauth.socialaccount.providers.yandex',
+    'django_apscheduler',
 ]
 
 SITE_ID = 0
@@ -147,3 +148,23 @@ STATICFILES_DIRS = [
 
 LOGIN_REDIRECT_URL = '/news'
 LOGOUT_REDIRECT_URL = '/news'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST = 'smtp.yandex.ru'
+EMAIL_PORT = 465
+EMAIL_HOST_USER = "GennadiiIG@yandex.ru"
+EMAIL_HOST_PASSWORD = "stukftoambmcfibl"
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = True
+
+DEFAULT_FROM_EMAIL = "GennadiiIG@yandex.ru"
+
+SERVER_EMAIL = "GennadiiIG@yandex.ru"
+MANAGERS = (
+    ('Ivan', 'ivan@yandex.ru'),
+    ('Petr', 'petr@yandex.ru'),
+)
+EMAIL_SUBJECT_PREFIX = 'NewsPortal'
+ADMINS = (
+    ('anton', 'anton@yandex.ru'),
+)

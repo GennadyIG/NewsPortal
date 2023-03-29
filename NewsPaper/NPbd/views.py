@@ -1,12 +1,14 @@
-from django.contrib.auth.models import Group
-from django.http import Http404
-from django.urls import reverse_lazy
+from django.contrib.auth.decorators import login_required
+from django.http import Http404, request
+from django.urls import reverse_lazy, reverse
+from django.views.decorators.csrf import csrf_protect
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from .models import Post
 from .filters import PostFilter
 from .forms import PostForm
 from django.contrib.auth.mixins import PermissionRequiredMixin
 from .models import Author
+from django.contrib.auth.models import User
 
 
 class PostList(ListView):
@@ -120,3 +122,8 @@ class ArticleDelete(PermissionRequiredMixin, DeleteView):
         if obj.author.author.id != self.request.user.id and not self.request.user.groups.filter(pk=3).exists():
             raise Http404("Вы не являетесь автором данной статьи")
         return super(ArticleDelete, self).dispatch(request, *args, **kwargs)
+
+
+def like(request):
+    request.news.like()
+    return reverse('news_detail')
