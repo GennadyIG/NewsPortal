@@ -152,14 +152,14 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_HOST = 'smtp.yandex.ru'
 EMAIL_PORT = 465
-EMAIL_HOST_USER = "GennadiiIG@yandex.ru"
-EMAIL_HOST_PASSWORD = "stukftoambmcfibl"
+EMAIL_HOST_USER = ""
+EMAIL_HOST_PASSWORD = ""
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 
-DEFAULT_FROM_EMAIL = "GennadiiIG@yandex.ru"
+DEFAULT_FROM_EMAIL = ""
 
-SERVER_EMAIL = "GennadiiIG@yandex.ru"
+SERVER_EMAIL = ""
 MANAGERS = (
     ('Ivan', 'ivan@yandex.ru'),
     ('Petr', 'petr@yandex.ru'),
