@@ -162,15 +162,6 @@ DEFAULT_FROM_EMAIL = "****"
 
 SERVER_EMAIL = "****"
 
-EMAIL_HOST_USER = ""
-EMAIL_HOST_PASSWORD = ""
-EMAIL_USE_TLS = False
-EMAIL_USE_SSL = True
-
-DEFAULT_FROM_EMAIL = ""
-
-SERVER_EMAIL = ""
-
 MANAGERS = (
     ('Ivan', 'ivan@yandex.ru'),
     ('Petr', 'petr@yandex.ru'),
