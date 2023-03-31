@@ -23,11 +23,14 @@ def my_job():
     for user in User.objects.all():
         # Список названий категорий-подписок пользователя
         userSub = user.subscriptions.all().values_list('category__name', flat=True)
-        user_news = tuple(post for post in posts if set(post.category.all().values_list('name', flat=True)).intersection(set(userSub)))
+        user_news = tuple(post for post in posts
+                          if set(post.category.all().values_list('name', flat=True)).intersection(set(userSub)))
         if user_news:
             subject = f'Список статей по Вашим подпискам за последнюю неделю'
-            text_content = '\n'.join([f'{news.post_title}: http://127.0.0.1{news.get_absolute_url()}' for news in user_news])
-            html_content = '<br><br>'.join([f'<a href="http://127.0.0.1{news.get_absolute_url()}">{news.post_title}</a><br>{news.preview()}' for news in user_news])
+            text_content = '\n'.join([f'{news.post_title}: '
+                                      f'http://127.0.0.1{news.get_absolute_url()}' for news in user_news])
+            html_content = '<br><br>'.join([f'<a href="http://127.0.0.1{news.get_absolute_url()}">'
+                                            f'{news.post_title}</a><br>{news.preview()}' for news in user_news])
             msg = EmailMultiAlternatives(subject, text_content, None, [user.email])
             msg.attach_alternative(html_content, "text/html")
             msg.send()
@@ -58,7 +61,7 @@ class Command(BaseCommand):
         scheduler.add_job(
             delete_old_job_executions,
             trigger=CronTrigger(
-                day_of_week="tue", hour="23", minute="26"
+                day_of_week="mon", hour="00", minute="00"
             ),
             id="delete_old_job_executions",
             max_instances=1,
