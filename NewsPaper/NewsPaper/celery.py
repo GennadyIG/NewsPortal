@@ -13,6 +13,6 @@ app.autodiscover_tasks()
 app.conf.beat_schedule = {
     'weekly_newsletter': {
         'task': 'NPbd.tasks.weekly_newsletter',
-        'schedule': crontab(minute=22, hour=21, day_of_week='sunday'),
+        'schedule': crontab(minute=0, hour=8, day_of_week='monday'),
     },
 }
