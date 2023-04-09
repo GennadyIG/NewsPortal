@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
+from project_data import email, red
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -153,14 +154,14 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_HOST = 'smtp.yandex.ru'
 EMAIL_PORT = 465
 
-EMAIL_HOST_USER = "****"
-EMAIL_HOST_PASSWORD = "****"
+EMAIL_HOST_USER = f"{email[2]['login']}"
+EMAIL_HOST_PASSWORD = f"{email[2]['password']}"
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 
-DEFAULT_FROM_EMAIL = "****"
+DEFAULT_FROM_EMAIL = f"{email[2]['login']}"
 
-SERVER_EMAIL = "****"
+SERVER_EMAIL = f"{email[2]['login']}"
 
 MANAGERS = (
     ('Ivan', 'ivan@yandex.ru'),
@@ -170,3 +171,10 @@ EMAIL_SUBJECT_PREFIX = 'NewsPortal'
 ADMINS = (
     ('anton', 'anton@yandex.ru'),
 )
+
+CELERY_BROKER_URL = f'redis://{red["login"]}:{red["password"]}@{red["url"]}'
+CELERY_RESULT_BACKEND = f'redis://{red["login"]}:{red["password"]}@{red["url"]}'
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_ENABLE_UTC = False

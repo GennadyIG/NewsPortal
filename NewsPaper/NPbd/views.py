@@ -1,14 +1,11 @@
-from django.contrib.auth.decorators import login_required
-from django.http import Http404, request
+from django.http import Http404
 from django.urls import reverse_lazy, reverse
-from django.views.decorators.csrf import csrf_protect
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from .models import Post
 from .filters import PostFilter
 from .forms import PostForm
 from django.contrib.auth.mixins import PermissionRequiredMixin
 from .models import Author
-from django.contrib.auth.models import User
 
 
 class PostList(ListView):
