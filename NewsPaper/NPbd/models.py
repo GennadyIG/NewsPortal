@@ -2,6 +2,7 @@ from django.db import models
 from .resources import *
 from django.contrib.auth.models import User
 from django.urls import reverse
+from django.core.cache import cache
 
 
 class Author(models.Model):
@@ -50,6 +51,10 @@ class Post(models.Model):
             return reverse('news_detail', args=[str(self.id)])
         else:
             return reverse('article_detail', args=[str(self.id)])
+
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)  # сначала вызываем метод родителя, чтобы объект сохранился
+        cache.delete(f'post-{self.pk}')
 
     def like(self) -> None:
         self.post_rating += 1

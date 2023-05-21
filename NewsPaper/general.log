@@ -1,0 +1,8 @@
+2023-05-21 17:54:54,851 INFO autoreload Watching for file changes with StatReloader
+2023-05-21 18:08:42,707 INFO autoreload Watching for file changes with StatReloader
+2023-05-21 18:11:13,144 INFO autoreload A:\DjangoProjects\NewsPaper\NewsPaper\settings.py changed, reloading.
+2023-05-21 18:15:07,167 INFO autoreload Watching for file changes with StatReloader
+2023-05-21 18:19:16,169 INFO autoreload Watching for file changes with StatReloader
+2023-05-21 18:20:02,623 INFO autoreload A:\DjangoProjects\NewsPaper\NewsPaper\settings.py changed, reloading.
+2023-05-21 18:20:03,796 INFO autoreload Watching for file changes with StatReloader
+2023-05-21 18:20:31,539 INFO autoreload A:\DjangoProjects\NewsPaper\NewsPaper\settings.py changed, reloading.
