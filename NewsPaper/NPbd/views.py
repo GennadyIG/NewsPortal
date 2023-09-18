@@ -6,6 +6,7 @@ from .filters import PostFilter
 from .forms import PostForm
 from django.contrib.auth.mixins import PermissionRequiredMixin
 from .models import Author
+from django.core.cache import cache
 
 
 class PostList(ListView):
@@ -37,6 +38,15 @@ class PostDetail(DetailView):
     model = Post
     template_name = 'news.html'
     context_object_name = 'news'
+    queryset = Post.objects.all()
+
+    def get_object(self, *args, **kwargs):
+        obj = cache.get(f'post-{self.kwargs["pk"]}', None)
+        if not obj:
+            obj = super().get_object(queryset=self.queryset)
+            cache.set(f'post-{self.kwargs["pk"]}', obj)
+
+        return obj
 
 
 class NewsCreate(PermissionRequiredMixin, CreateView):
