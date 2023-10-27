@@ -1,0 +1,94 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-24 13:56+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: NPbd/filters.py:11 templates/all_news.html:51
+msgid "Заголовок"
+msgstr "Title"
+
+#: NPbd/filters.py:12 templates/all_news.html:54
+msgid "Дата публикации"
+msgstr "Adding time"
+
+#: NPbd/filters.py:15
+msgid "любая"
+msgstr "any"
+
+#: NPbd/filters.py:15
+msgid "Категория"
+msgstr "Category"
+
+#: templates/account/email/email_confirmation_message.txt:8
+#, python-format
+msgid ""
+"Вы получили это сообщение,\n"
+"потому что пользователь %(user_display)s указал этот email при регистрации "
+"на сайте %(site_domain)s.\n"
+"\n"
+"Для подтверждения регистрации пройдите по ссылке %(activate_url)s\n"
+"\n"
+"Хорошего дня!\n"
+msgstr ""
+
+#: templates/all_news.html:11
+msgid "Новости"
+msgstr "News"
+
+#: templates/all_news.html:15 templates/flatpages/default.html:25
+msgid "Список новостей"
+msgstr "News"
+
+#: templates/all_news.html:16
+msgid "Показаны"
+msgstr "View"
+
+#: templates/all_news.html:16
+msgid "из"
+msgstr "of"
+
+#: templates/all_news.html:20
+msgid "Найти"
+msgstr "Search"
+
+#: templates/all_news.html:57
+msgid "Предпросмотр"
+msgstr "Preview"
+
+#: templates/all_news.html:78
+msgid "Создать статью"
+msgstr "Create article"
+
+#: templates/all_news.html:82
+msgid "Создать новость"
+msgstr "Create news"
+
+#: templates/flatpages/default.html:27
+msgid "Профиль"
+msgstr "Profile"
+
+#: templates/flatpages/default.html:28
+msgid "Выйти"
+msgstr "Logout"
+
+#: templates/flatpages/default.html:30
+msgid "Войти"
+msgstr "Login"
+
+#~ msgid "Дата добавления от"
+#~ msgstr "Adding time"

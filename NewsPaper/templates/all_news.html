@@ -1,25 +1,25 @@
 {% extends 'flatpages/default.html' %}
 
+{% load i18n %}
+{% load l10n %}
 {% load custom_filters %}
 {% load cache %}
 {% load custom_tags %}
 {#{% load add %}#}
 
 {% block title %}
-    Новости
+    {% trans 'Новости' %}
 {% endblock title %}
 
 {% block content %}
-    <h1>Список новостей:</h1>
-    <h5>Показаны {{ page_obj.start_index }}-{{ page_obj.end_index }} из {{ page_obj.paginator.count }}</h5>
+    <h1>{% trans 'Список новостей' %}</h1>
+    <h5>{% trans 'Показаны' %} {{ page_obj.start_index }}-{{ page_obj.end_index }} {% trans 'из' %} {{ page_obj.paginator.count }}</h5>
 
     <form action="" method="get">
-       {# Переменная, которую мы передали через контекст, может сгенерировать нам форму с полями #}
        {{ filterset.form.as_p }}
-       {# Добавим кнопку отправки данных формы #}
-       <input type="submit" value="Найти" />
+       <input type="submit" value="{% trans 'Найти' %}" />
     </form>
-{#    {% cache 60 page %}#}
+
     {% if page_obj.has_previous %}
         <a href="?{% url_replace page=1 %}">1</a>
         {% if page_obj.previous_page_number != 1 %}
@@ -48,13 +48,13 @@
     <table align="center" style="display: inline-block">
         <tr style="border-bottom: 1px solid black">
             <td>
-                Заголовок
+                {% trans 'Заголовок' %}
             </td>
             <td style="width: 180px">
-               Дата публикации
+               {% trans 'Дата публикации' %}
             </td>
             <td>
-               Предпросмотр
+               {% trans 'Предпросмотр' %}
             </td>
         </tr>
         {% for news in all_news %}
@@ -71,15 +71,15 @@
             </tr>
         {% endfor %}
     </table>
-{#    {% endcache %}#}
+
     <br>
     {% if perms.NPbd.add_post %}
         <form style="float: right; margin-right: 390px" action="/articles/create">
-        <input type="submit" value="Создать статью">
+        <input type="submit" value="{% trans 'Создать статью' %}">
         </form>
         <br><br>
         <form style="float: right; margin-right: 390px" action="/news/create">
-        <input type="submit" value="Создать новость">
+        <input type="submit" value="{% trans 'Создать новость' %}">
         </form>
     {% endif %}
 

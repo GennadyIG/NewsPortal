@@ -19,6 +19,7 @@ from allauth.account import views
 from accounts.views import subscriptions
 
 urlpatterns = [
+    path('i18n/', include('django.conf.urls.i18n'), name='lang'),
     path('', views.login),
     path('profile/', include('accounts.urls_profile')),
     path('admin/', admin.site.urls),

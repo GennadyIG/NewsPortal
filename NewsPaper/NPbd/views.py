@@ -7,6 +7,9 @@ from .forms import PostForm
 from django.contrib.auth.mixins import PermissionRequiredMixin
 from .models import Author
 from django.core.cache import cache
+from django.utils import timezone
+import pytz
+from django.shortcuts import redirect
 
 
 class PostList(ListView):
@@ -29,9 +32,16 @@ class PostList(ListView):
         return self.filterset.qs
 
     def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
+        context = super().get_context_data(**kwargs) | {
+            'current_time': timezone.now(),
+            'timezones': pytz.common_timezones,
+        }
         context['filterset'] = self.filterset
         return context
+
+    def post(self, request):
+        request.session['django_timezone'] = request.POST['timezone']
+        return redirect('/')
 
 
 class PostDetail(DetailView):
@@ -47,6 +57,17 @@ class PostDetail(DetailView):
             cache.set(f'post-{self.kwargs["pk"]}', obj)
 
         return obj
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs) | {
+            'current_time': timezone.now(),
+            'timezones': pytz.common_timezones,
+        }
+        return context
+
+    def post(self, request, **kwargs):
+        request.session['django_timezone'] = request.POST['timezone']
+        return redirect(f'{self.kwargs["pk"]}')
 
 
 class NewsCreate(PermissionRequiredMixin, CreateView):

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-{% load cache %}
+{% load i18n %}
+{% load tz %}
 <html lang="en">
     <head>
         <meta charset="utf-8" />
@@ -13,26 +14,61 @@
             {% load static %}
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+        <style>
+        body {background-color: {% if current_time.hour >= 19 or current_time.hour <= 7 %} darkcyan {% else %} powderblue {% endif %};}
+        </style>
     </head>
     <body style="display: flex; flex-direction: column; height: 100vh">
         <!-- Responsive navbar-->
-        {% cache 600 navbar %}
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
            <div class="container">
-               <a class="navbar-brand" href="/news/">Список новостей</a>
+               <a class="navbar-brand" href="/news/">{% trans 'Список новостей' %}</a>
                {% if request.user.is_authenticated %}
-               <a class="navbar-brand" href="{% url 'profile' pk=request.user.pk %}">Профиль</a>
-               <a class="navbar-brand" href="/accounts/logout/">Выйти</a>
+               <a class="navbar-brand" href="{% url 'profile' pk=request.user.pk %}">{% trans 'Профиль' %}</a>
+               <a class="navbar-brand" href="/accounts/logout/">{% trans 'Выйти' %}</a>
                {% else %}
-               <a class="navbar-brand" href="/accounts/login/">Войти</a>
+               <a class="navbar-brand" href="/accounts/login/">{% trans 'Войти' %}</a>
                {% endif %}
+
+               <form action="{% url 'set_language' %}" method="POST"> {% csrf_token %} <!-- Не забываем по csrf_token для POST запросов -->
+                   <input type="hidden" name="next" value="{{ redirect_to }}">
+                   {% get_current_language as LANGUAGE_CODE %}
+                   <select name="language" id="">
+                       {% get_available_languages as LANGUAGES %} <!-- получаем языки -->
+                       {% get_language_info_list for LANGUAGES as languages %} <!-- Помещаем их в список languages -->
+
+                       {% for language in languages %} <!-- Итерируясь по списку, выводим их название на языке пользователя и код -->
+                           <option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %} selected {% endif %}>
+                               {{ language.name_local }} - {{ language.code }}
+                           </option>
+                       {% endfor %}
+                   </select>
+                   <input type="submit" value="set">
+               </form>
+
+               {% get_current_timezone as TIME_ZONE %}
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <label class="navbar-brand" for='timezone'>Time zone:</label>
+                    <select name="timezone">
+                        {% for tz in timezones %}
+                        <option value="{{ tz }}"{% if tz == TIME_ZONE %} selected{% endif %}>{{ tz }}</option>
+                        {% endfor %}
+                    </select>
+                    <input type="submit" value="Set">
+                </form>
+
+               {{current_time.hour |timezone:TIME_ZONE}}<br>
+
            </div>
         </nav>
-        {% endcache %}
         <!-- Page content-->
         <div class="container" style="flex: 1 0 auto">
            <div class="row">
                <div class="col-lg-12 text-center">
+
+                   {{ current_time }}<br>
+
                    {% block content %}
                    {% endblock content %}
                </div>

@@ -82,3 +82,1035 @@ Traceback (most recent call last):
     1/0
 ZeroDivisionError: division by zero
 2023-05-21 18:08:56,098 ERROR "POST /articles/create/ HTTP/1.1" 500 145 A:\DjangoProjects\venv\lib\site-packages\django\core\servers\basehttp.py
+2023-09-19 23:31:34,226 ERROR Internal Server Error: / /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/utils/log.py
+Traceback (most recent call last):
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such column: socialaccount_socialapp.provider_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/library.py", line 237, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/allauth/socialaccount/templatetags/socialaccount.py", line 79, in get_providers
+    providers = adapter.list_providers(request)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/allauth/socialaccount/adapter.py", line 181, in list_providers
+    apps = self.list_apps(request)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/allauth/socialaccount/adapter.py", line 236, in list_apps
+    for app in db_apps:
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/db/models/query.py", line 398, in __iter__
+    self._fetch_all()
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such column: socialaccount_socialapp.provider_id
+2023-09-19 23:31:34,238 ERROR "GET / HTTP/1.1" 500 266436 /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py
+2023-09-19 23:34:08,996 ERROR Internal Server Error: / /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/utils/log.py
+Traceback (most recent call last):
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such column: socialaccount_socialapp.provider_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/library.py", line 237, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/allauth/socialaccount/templatetags/socialaccount.py", line 79, in get_providers
+    providers = adapter.list_providers(request)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/allauth/socialaccount/adapter.py", line 181, in list_providers
+    apps = self.list_apps(request)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/allauth/socialaccount/adapter.py", line 236, in list_apps
+    for app in db_apps:
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/db/models/query.py", line 398, in __iter__
+    self._fetch_all()
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such column: socialaccount_socialapp.provider_id
+2023-09-19 23:34:09,003 ERROR "GET / HTTP/1.1" 500 266540 /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py
+2023-09-21 20:14:59,837 ERROR Internal Server Error: /news/ /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/utils/log.py
+Traceback (most recent call last):
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'set_language' not found. 'set_language' is not a valid view function or pattern name.
+2023-09-21 20:14:59,876 ERROR "GET /news/ HTTP/1.1" 500 168711 /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py
+2023-09-21 20:15:03,432 ERROR Internal Server Error: /news/ /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/utils/log.py
+Traceback (most recent call last):
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'set_language' not found. 'set_language' is not a valid view function or pattern name.
+2023-09-21 20:15:03,433 ERROR "GET /news/ HTTP/1.1" 500 168711 /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py
+2023-09-21 21:42:50,711 ERROR Internal Server Error: /articles/ /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/utils/log.py
+Traceback (most recent call last):
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/list.py", line 154, in get
+    self.object_list = self.get_queryset()
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/NewsPaper/NPbd/views.py", line 29, in get_queryset
+    return self.filterset.qs
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 229, in qs
+    self.errors
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 202, in errors
+    return self.form.errors
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 250, in form
+    Form = self.get_form_class()
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 242, in get_form_class
+    [(name, filter_.field) for name, filter_ in self.filters.items()]
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 242, in <listcomp>
+    [(name, filter_.field) for name, filter_ in self.filters.items()]
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django_filters/filters.py", line 149, in field
+    self._field = self.field_class(label=self.label, **field_kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/forms/fields.py", line 445, in __init__
+    super().__init__(**kwargs)
+TypeError: Field.__init__() got an unexpected keyword argument 'placeholder'
+2023-09-21 21:42:50,724 ERROR "GET /articles/ HTTP/1.1" 500 119902 /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py
+2023-09-21 21:57:24,222 ERROR Internal Server Error: /articles/ /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/utils/log.py
+Traceback (most recent call last):
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/templatetags/i18n.py", line 214, in render
+    output = self.nodelist.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'category' not found. 'category' is not a valid view function or pattern name.
+2023-09-21 21:57:24,244 ERROR "GET /articles/ HTTP/1.1" 500 205726 /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py
+2023-09-21 22:00:13,529 ERROR Internal Server Error: /articles/ /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/utils/log.py
+Traceback (most recent call last):
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/templatetags/i18n.py", line 214, in render
+    output = self.nodelist.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'lang' not found. 'lang' is not a valid view function or pattern name.
+2023-09-21 22:00:13,533 ERROR "GET /articles/ HTTP/1.1" 500 205626 /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py
+2023-09-21 22:00:33,589 ERROR Internal Server Error: /articles/ /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/utils/log.py
+Traceback (most recent call last):
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/templatetags/i18n.py", line 214, in render
+    output = self.nodelist.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'lang' not found. 'lang' is not a valid view function or pattern name.
+2023-09-21 22:00:33,593 ERROR "GET /articles/ HTTP/1.1" 500 205626 /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py
+2023-09-21 22:01:56,319 ERROR Internal Server Error: /articles/ /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/utils/log.py
+Traceback (most recent call last):
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/templatetags/i18n.py", line 214, in render
+    output = self.nodelist.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'lang' not found. 'lang' is not a valid view function or pattern name.
+2023-09-21 22:01:56,323 ERROR "GET /articles/ HTTP/1.1" 500 205305 /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py
+2023-09-21 23:09:42,685 ERROR Internal Server Error: /articles/ /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/utils/log.py
+Traceback (most recent call last):
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/list.py", line 154, in get
+    self.object_list = self.get_queryset()
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/NewsPaper/NPbd/views.py", line 29, in get_queryset
+    return self.filterset.qs
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 229, in qs
+    self.errors
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 202, in errors
+    return self.form.errors
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 250, in form
+    Form = self.get_form_class()
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 242, in get_form_class
+    [(name, filter_.field) for name, filter_ in self.filters.items()]
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 242, in <listcomp>
+    [(name, filter_.field) for name, filter_ in self.filters.items()]
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django_filters/filters.py", line 149, in field
+    self._field = self.field_class(label=self.label, **field_kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/forms/fields.py", line 445, in __init__
+    super().__init__(**kwargs)
+TypeError: Field.__init__() got an unexpected keyword argument 'lookup_type'
+2023-09-21 23:09:42,688 ERROR "GET /articles/ HTTP/1.1" 500 119842 /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py
+2023-09-21 23:09:46,478 ERROR Internal Server Error: /articles/ /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/utils/log.py
+Traceback (most recent call last):
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/list.py", line 154, in get
+    self.object_list = self.get_queryset()
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/NewsPaper/NPbd/views.py", line 29, in get_queryset
+    return self.filterset.qs
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 229, in qs
+    self.errors
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 202, in errors
+    return self.form.errors
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 250, in form
+    Form = self.get_form_class()
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 242, in get_form_class
+    [(name, filter_.field) for name, filter_ in self.filters.items()]
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 242, in <listcomp>
+    [(name, filter_.field) for name, filter_ in self.filters.items()]
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django_filters/filters.py", line 149, in field
+    self._field = self.field_class(label=self.label, **field_kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/forms/fields.py", line 445, in __init__
+    super().__init__(**kwargs)
+TypeError: Field.__init__() got an unexpected keyword argument 'lookup_type'
+2023-09-21 23:09:46,480 ERROR "GET /articles/ HTTP/1.1" 500 119842 /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py
+2023-09-22 20:09:13,026 ERROR Internal Server Error: /news/ /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/utils/log.py
+Traceback (most recent call last):
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/list.py", line 154, in get
+    self.object_list = self.get_queryset()
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/NewsPaper/NPbd/views.py", line 29, in get_queryset
+    return self.filterset.qs
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 229, in qs
+    self.errors
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 202, in errors
+    return self.form.errors
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 250, in form
+    Form = self.get_form_class()
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 242, in get_form_class
+    [(name, filter_.field) for name, filter_ in self.filters.items()]
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 242, in <listcomp>
+    [(name, filter_.field) for name, filter_ in self.filters.items()]
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django_filters/filters.py", line 149, in field
+    self._field = self.field_class(label=self.label, **field_kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/forms/fields.py", line 445, in __init__
+    super().__init__(**kwargs)
+TypeError: Field.__init__() got an unexpected keyword argument 'verbose_name'
+2023-09-22 20:09:13,058 ERROR "GET /news/ HTTP/1.1" 500 119582 /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py
+2023-09-22 22:13:30,189 ERROR Internal Server Error: /news/ /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/utils/log.py
+Traceback (most recent call last):
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/list.py", line 154, in get
+    self.object_list = self.get_queryset()
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/NewsPaper/NPbd/views.py", line 29, in get_queryset
+    return self.filterset.qs
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 229, in qs
+    self.errors
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 202, in errors
+    return self.form.errors
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 250, in form
+    Form = self.get_form_class()
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 242, in get_form_class
+    [(name, filter_.field) for name, filter_ in self.filters.items()]
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 242, in <listcomp>
+    [(name, filter_.field) for name, filter_ in self.filters.items()]
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django_filters/filters.py", line 149, in field
+    self._field = self.field_class(label=self.label, **field_kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/forms/fields.py", line 445, in __init__
+    super().__init__(**kwargs)
+TypeError: Field.__init__() got an unexpected keyword argument 'default'
+2023-09-22 22:13:30,227 ERROR "GET /news/ HTTP/1.1" 500 119610 /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py
+2023-09-22 22:36:11,245 ERROR Internal Server Error: /articles/ /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/utils/log.py
+Traceback (most recent call last):
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/list.py", line 154, in get
+    self.object_list = self.get_queryset()
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/NewsPaper/NPbd/views.py", line 29, in get_queryset
+    return self.filterset.qs
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 229, in qs
+    self.errors
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 202, in errors
+    return self.form.errors
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 250, in form
+    Form = self.get_form_class()
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 242, in get_form_class
+    [(name, filter_.field) for name, filter_ in self.filters.items()]
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 242, in <listcomp>
+    [(name, filter_.field) for name, filter_ in self.filters.items()]
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django_filters/filters.py", line 149, in field
+    self._field = self.field_class(label=self.label, **field_kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/forms/fields.py", line 445, in __init__
+    super().__init__(**kwargs)
+TypeError: Field.__init__() got an unexpected keyword argument 'value'
+2023-09-22 22:36:11,254 ERROR "GET /articles/ HTTP/1.1" 500 119902 /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py
+2023-09-24 12:16:38,313 ERROR Internal Server Error: /news/like/ /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/utils/log.py
+Traceback (most recent call last):
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/NewsPaper/NPbd/views.py", line 135, in like
+    request.news.like()
+AttributeError: 'WSGIRequest' object has no attribute 'news'
+2023-09-24 12:16:38,351 ERROR "GET /news/like/? HTTP/1.1" 500 70424 /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py
+2023-09-24 14:08:38,039 ERROR Internal Server Error: /articles/ /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/utils/log.py
+Traceback (most recent call last):
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/list.py", line 154, in get
+    self.object_list = self.get_queryset()
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/NewsPaper/NPbd/views.py", line 31, in get_queryset
+    return self.filterset.qs
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 229, in qs
+    self.errors
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 202, in errors
+    return self.form.errors
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 250, in form
+    Form = self.get_form_class()
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 242, in get_form_class
+    [(name, filter_.field) for name, filter_ in self.filters.items()]
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 242, in <listcomp>
+    [(name, filter_.field) for name, filter_ in self.filters.items()]
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django_filters/filters.py", line 149, in field
+    self._field = self.field_class(label=self.label, **field_kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/forms/fields.py", line 445, in __init__
+    super().__init__(**kwargs)
+TypeError: Field.__init__() got an unexpected keyword argument 'value'
+2023-09-24 14:08:38,067 ERROR "GET /articles/ HTTP/1.1" 500 113985 /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py
+2023-09-24 16:56:39,919 ERROR Internal Server Error: /news/120 /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/utils/log.py
+Traceback (most recent call last):
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: PostDetail.post() got an unexpected keyword argument 'pk'
+2023-09-24 16:56:39,920 ERROR "POST /news/120 HTTP/1.1" 500 77831 /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py
+2023-09-24 16:58:11,850 ERROR Internal Server Error: /news/120 /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/utils/log.py
+Traceback (most recent call last):
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 136, in __call__
+    response = self.process_response(request, response)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/middleware/common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/news/120/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2023-09-24 16:58:11,852 ERROR "POST /news/120 HTTP/1.1" 500 77358 /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py
+2023-09-24 16:58:25,906 ERROR Internal Server Error: /news/120/ /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/utils/log.py
+Traceback (most recent call last):
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: PostDetail.post() got an unexpected keyword argument 'pk'
+2023-09-24 16:58:25,908 ERROR "POST /news/120/ HTTP/1.1" 500 77843 /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py
+2023-09-24 17:01:25,805 ERROR Internal Server Error: /news/120/ /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/utils/log.py
+Traceback (most recent call last):
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: PostDetail.post() got an unexpected keyword argument 'pk'
+2023-09-24 17:01:25,809 ERROR "POST /news/120/ HTTP/1.1" 500 77843 /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py
+2023-09-24 17:05:13,518 ERROR Internal Server Error: /news/120/ /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/utils/log.py
+Traceback (most recent call last):
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: PostDetail.post() got an unexpected keyword argument 'pk'
+2023-09-24 17:05:13,520 ERROR "POST /news/120/ HTTP/1.1" 500 77845 /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py
+2023-09-24 17:05:43,857 ERROR Internal Server Error: /news/120/ /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/utils/log.py
+Traceback (most recent call last):
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'article_edit' with keyword arguments '{'pk': ''}' not found. 1 pattern(s) tried: ['articles/(?P<pk>[0-9]+)/edit/\\Z']
+2023-09-24 17:05:43,860 ERROR "GET /news/120/ HTTP/1.1" 500 351999 /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py
+2023-09-24 17:05:48,149 ERROR Internal Server Error: /news/120/ /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/utils/log.py
+Traceback (most recent call last):
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'article_edit' with keyword arguments '{'pk': ''}' not found. 1 pattern(s) tried: ['articles/(?P<pk>[0-9]+)/edit/\\Z']
+2023-09-24 17:05:48,151 ERROR "GET /news/120/ HTTP/1.1" 500 352136 /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py
+2023-09-24 17:05:55,321 ERROR Internal Server Error: /news/120/ /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/utils/log.py
+Traceback (most recent call last):
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'article_edit' with keyword arguments '{'pk': ''}' not found. 1 pattern(s) tried: ['articles/(?P<pk>[0-9]+)/edit/\\Z']
+2023-09-24 17:05:55,327 ERROR "GET /news/120/ HTTP/1.1" 500 352155 /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py
+2023-09-24 17:08:47,551 ERROR Internal Server Error: /news/120 /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/utils/log.py
+Traceback (most recent call last):
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: PostDetail.post() got an unexpected keyword argument 'pk'
+2023-09-24 17:08:47,553 ERROR "POST /news/120 HTTP/1.1" 500 77553 /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py
+2023-09-24 19:33:20,515 ERROR Internal Server Error: /news/120 /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/utils/log.py
+Traceback (most recent call last):
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: PostDetail.post() got an unexpected keyword argument 'pk'
+2023-09-24 19:33:20,518 ERROR "POST /news/120 HTTP/1.1" 500 77703 /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py
+2023-09-24 20:38:55,726 ERROR Internal Server Error: /news/120 /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/utils/log.py
+Traceback (most recent call last):
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/NewsPaper/NPbd/views.py", line 70, in post
+    return redirect(f'{self.request.post_type}/{self.kwargs["pk"]}')
+AttributeError: 'WSGIRequest' object has no attribute 'post_type'
+2023-09-24 20:38:55,728 ERROR "POST /news/120 HTTP/1.1" 500 81787 /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py
+2023-09-24 20:47:42,228 ERROR Internal Server Error: /news/120 /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/utils/log.py
+Traceback (most recent call last):
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/NewsPaper/NPbd/views.py", line 70, in post
+    return redirect(f'{self.kwargs["pk"]}')
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for '120' not found. '120' is not a valid view function or pattern name.
+2023-09-24 20:47:42,230 ERROR "POST /news/120 HTTP/1.1" 500 100313 /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py
+2023-09-24 20:49:58,238 ERROR Internal Server Error: /news/120 /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/utils/log.py
+Traceback (most recent call last):
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/NewsPaper/NPbd/views.py", line 70, in post
+    return redirect(f'{self.kwargs["pk"]}')
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for '120' not found. '120' is not a valid view function or pattern name.
+2023-09-24 20:49:58,240 ERROR "POST /news/120 HTTP/1.1" 500 100318 /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py
