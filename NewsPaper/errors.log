@@ -1114,3 +1114,25 @@ Traceback (most recent call last):
     raise NoReverseMatch(msg)
 django.urls.exceptions.NoReverseMatch: Reverse for '120' not found. '120' is not a valid view function or pattern name.
 2023-09-24 20:49:58,240 ERROR "POST /news/120 HTTP/1.1" 500 100318 /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py
+2023-10-28 15:37:59,626 ERROR Internal Server Error: /news/120 /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/utils/log.py
+Traceback (most recent call last):
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/NewsPaper/NPbd/views.py", line 70, in post
+    return redirect(f'{self.kwargs["pk"]}')
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for '120' not found. '120' is not a valid view function or pattern name.
+2023-10-28 15:37:59,665 ERROR "POST /news/120 HTTP/1.1" 500 100451 /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py

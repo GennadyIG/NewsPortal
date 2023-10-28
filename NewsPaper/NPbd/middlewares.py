@@ -2,6 +2,7 @@ import pytz
 
 from django.utils import timezone
 
+
 class TimezoneMiddleware:
     def __init__(self, get_response):
         self.get_response = get_response

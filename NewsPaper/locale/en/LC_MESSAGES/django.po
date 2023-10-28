@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-24 13:56+0300\n"
+"POT-Creation-Date: 2023-10-28 15:24+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,21 +18,21 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: NPbd/filters.py:11 templates/all_news.html:51
-msgid "Заголовок"
+#: NPbd/filters.py:8
+msgid "Заголовок содержит"
 msgstr "Title"
 
-#: NPbd/filters.py:12 templates/all_news.html:54
-msgid "Дата публикации"
+#: NPbd/filters.py:9
+msgid "Дата добавления"
 msgstr "Adding time"
 
-#: NPbd/filters.py:15
-msgid "любая"
-msgstr "any"
-
-#: NPbd/filters.py:15
+#: NPbd/filters.py:11
 msgid "Категория"
 msgstr "Category"
+
+#: NPbd/filters.py:13
+msgid "любая"
+msgstr "any"
 
 #: templates/account/email/email_confirmation_message.txt:8
 #, python-format
@@ -66,6 +66,14 @@ msgstr "of"
 msgid "Найти"
 msgstr "Search"
 
+#: templates/all_news.html:51
+msgid "Заголовок"
+msgstr "Title"
+
+#: templates/all_news.html:54
+msgid "Дата публикации"
+msgstr "Adding time"
+
 #: templates/all_news.html:57
 msgid "Предпросмотр"
 msgstr "Preview"
@@ -89,6 +97,3 @@ msgstr "Logout"
 #: templates/flatpages/default.html:30
 msgid "Войти"
 msgstr "Login"
-
-#~ msgid "Дата добавления от"
-#~ msgstr "Adding time"
