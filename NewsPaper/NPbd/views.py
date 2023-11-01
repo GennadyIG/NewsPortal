@@ -10,6 +10,8 @@ from django.core.cache import cache
 from django.utils import timezone
 import pytz
 from django.shortcuts import redirect
+from rest_framework import generics
+from .serializers import *
 
 
 class PostList(ListView):
@@ -151,7 +153,6 @@ class ArticleDelete(PermissionRequiredMixin, DeleteView):
             raise Http404("Вы не являетесь автором данной статьи")
         return super(ArticleDelete, self).dispatch(request, *args, **kwargs)
 
-
-def like(request):
-    request.news.like()
-    return reverse('news_detail')
+class PostViewSet(generics.ListCreateAPIView):
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer

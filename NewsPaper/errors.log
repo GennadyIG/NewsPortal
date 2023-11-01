@@ -1136,3 +1136,47 @@ Traceback (most recent call last):
     raise NoReverseMatch(msg)
 django.urls.exceptions.NoReverseMatch: Reverse for '120' not found. '120' is not a valid view function or pattern name.
 2023-10-28 15:37:59,665 ERROR "POST /news/120 HTTP/1.1" 500 100451 /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py
+2023-11-01 20:58:31,564 ERROR Internal Server Error: /api/v1/posts/ /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/utils/log.py
+Traceback (most recent call last):
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 239, in get
+    return self.list(request, *args, **kwargs)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1052, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1124, in get_field_names
+    assert not (fields is None and exclude is None), (
+AssertionError: ("Creating a ModelSerializer without either the 'fields' attribute or the 'exclude' attribute has been deprecated since 3.3.0, and is now disallowed. Add an explicit fields = '__all__' to the PostSerializer serializer.",)
+2023-11-01 20:58:31,606 ERROR "GET /api/v1/posts/ HTTP/1.1" 500 158190 /home/gennady/Документы/SkillFactory/NewsPortal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py

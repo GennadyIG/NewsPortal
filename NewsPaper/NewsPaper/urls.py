@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from allauth.account import views
 from accounts.views import subscriptions
+from NPbd.views import PostViewSet
 
 urlpatterns = [
     path('i18n/', include('django.conf.urls.i18n'), name='lang'),
@@ -28,4 +29,6 @@ urlpatterns = [
     path('articles/', include('NPbd.urls_articles')),
     path('accounts/', include('allauth.urls')),
     path('subscription/', subscriptions, name='subscriptions'),
+    path('api/v1/posts/', PostViewSet.as_view()),
+    path('api/v1/posts/<int:pk>', PostViewSet.as_view()),
 ]

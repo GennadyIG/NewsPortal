@@ -1,4 +1,6 @@
 from django.db import models
+from django.db.models import CharField
+
 from .resources import *
 from django.contrib.auth.models import User
 from django.urls import reverse
@@ -29,7 +31,7 @@ class Author(models.Model):
 class Category(models.Model):
     name = models.CharField(max_length=255, unique=True)
 
-    def __str__(self) -> str:
+    def __str__(self) -> CharField:
         return self.name
 
 
